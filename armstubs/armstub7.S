@@ -116,7 +116,7 @@ setup_gic:				@ Called from secure mode - set all interrupts to group 1 and enab
 	strd    r0, r1, [r2,#8]
 	strd    r0, r1, [r2,#16]
 
-	movw	r1, #0x1e7
+	movw	r1, #0
 	str	r1, [r2, #(GIC_CPUB_offset - GICD_IGROUPR) ]! @ Enable group  1 IRQs from CPU interface
 
 	movw	r1, #0xff
